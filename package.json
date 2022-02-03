@@ -1,0 +1,25 @@
+{
+  "name": "video-tube",
+  "version": "1.0.0",
+  "description": "video tube website app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-vtube:kimondo88/video-tube.git"
+  },
+  "keywords": [
+    "website",
+    "app",
+    "video",
+    "tube"
+  ],
+  "author": "adam \"Kim\" Tarczewski\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "react": "^17.0.2"
+  }
+}
