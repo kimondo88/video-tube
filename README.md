@@ -4,8 +4,8 @@ Video-Tube is my attempt at recreating youtube like site. Practice makes perfect
 
 # Technologies that will be used used in project.
 
-- Express
-- React
+- React, Redux
+- ReactRedux, Connected React Router
 
 # Documentation
 

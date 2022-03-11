@@ -71,3 +71,10 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+client/node_modules
+
+#ignore pictures
+*.png
+*.ico
+*.svg
+*.jpg
