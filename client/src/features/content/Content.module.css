@@ -1,0 +1,10 @@
+:root{
+    --nav-color: #383838;
+}
+.content{
+    background-color: var(--nav-color);
+    position: relative;
+    margin-top: 5vh;
+    width: 100%;
+    height: 95%;
+}
