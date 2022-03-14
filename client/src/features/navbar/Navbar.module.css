@@ -16,6 +16,7 @@
     align-items: center;
 }
 .home{
+    margin-left: 4vw;
     color: black;
 }
 .search{
@@ -26,6 +27,26 @@
     background-color: black;
     height: 2.5vh;
     width: 25vw;
+}
+.leftBar{
+    background-color: var(--nav-color);
+    position: absolute;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 20vw;
+    overflow: hidden;
+}
+.leftBarMin{
+    background-color: var(--nav-color);
+    position: absolute;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 5vw;
+    overflow: hidden;
 }
 .rightBar{
     color: red;
