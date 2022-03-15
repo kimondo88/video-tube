@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    visibility: true
+    visibility: true,
 };
 
 export const navbarSlice = createSlice({

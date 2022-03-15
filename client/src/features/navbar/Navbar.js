@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 import { toggleVisible } from './navbarSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 export function Navbar(){
     const dispatch = useDispatch();
@@ -17,8 +17,6 @@ export function Navbar(){
             </div>
             <div className={styles.rightBar}>Right-Menu</div>
         </div>
-        
-        
     </div>
     )
 }

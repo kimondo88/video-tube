@@ -34,23 +34,36 @@
 }
 .leftBar{
     background-color: var(--nav-color);
-    position: relative;
+    position: fixed;
     margin-top: 5vh;
+    margin-left: 0px;
     display: flex;
     flex-direction: column;
-    height: 95%;
-    width: 20vw;
+    height: 100%;
+    width: 12vw;
     overflow: hidden;
+    z-index: 1;
+    transition-property: margin-left;
+    transition-timing-function: ease-in-out;
+}
+.leftBarTrans{
+    margin-left: -12vw;
+    transition-property: margin-left;
+    transition-timing-function: ease-in-out;
+}
+.duration{
+ transition-duration: 0.3s;
 }
 .leftBarMin{
     background-color: var(--nav-color);
-    position: relative;
+    position: fixed;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    height: 95%;
-    width: 5vw;
+    height: 100%;
+    width: 2.5vw;
     overflow: hidden;
+    z-index: 1;
 }
 .rightBar{
     color: red;
