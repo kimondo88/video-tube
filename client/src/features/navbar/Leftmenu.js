@@ -21,6 +21,7 @@ function LeftMenuShow(){
         }else if(counter !== 0){
             return toggle();
         }  
+    // eslint-disable-next-line
     }, [visible]);
     function toggle(){
       let element = document.getElementById('menu');
