@@ -1,6 +1,9 @@
 :root{
     --nav-color: #383838;
     --nav-analogous: #525252;
+    --nav-hover-color: #5E5E5E;
+    --text-color: white;
+
 }
 .navFixed{
     background-color: var(--nav-color);
@@ -38,6 +41,7 @@
     margin-top: 5vh;
     margin-left: 0px;
     display: flex;
+    visibility: visible;
     flex-direction: column;
     height: 100%;
     width: 12vw;
@@ -57,14 +61,43 @@
 .leftBarMin{
     background-color: var(--nav-color);
     position: fixed;
+    visibility: visible;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 2.5vw;
+    width: 3vw;
     overflow: hidden;
     z-index: 1;
 }
 .rightBar{
     color: red;
+}
+.none{
+    display: none;
+}
+.font{
+    cursor: pointer;
+    margin-top: 0.7vh;
+    height: 2.5vh;
+    color: var(--text-color);
+    display: inline-grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+}
+.fontMin{
+    cursor: pointer;
+    margin-top: 0.7vh;
+    height: 2.5vh;
+    color: var(--text-color);
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+.font:hover, .fontMin:hover{
+    background-color: var(--nav-hover-color);
+}
+.gridItem{
+    justify-self: center;
+    align-self: center;
 }
