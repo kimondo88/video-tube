@@ -2,6 +2,8 @@ import styles from './Content.module.css';
 import { useState } from 'react';
 
 export function Content(){
+    //temporarily disable it for eslint, setContent will be used later
+    // eslint-disable-next-line
     const [content, setContent] = useState([
         'first', 'two', 'three', 'four' , 'five', 'six', 'seven',
         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen'
