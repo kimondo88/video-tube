@@ -17,9 +17,7 @@ function LeftMenuShow(){
     const [counter, setCounter] = useState(0);
     const visible = useSelector(selectVisibility);
     useEffect(()=>{
-        if(visible === false){
-            return toggleHidden();
-        }else if(counter !== 0){
+        if(counter !== 0){
             return toggleHidden();
         }  
         setCounter(1);

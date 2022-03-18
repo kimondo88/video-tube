@@ -13,9 +13,7 @@ export function Content(){
     const [counter, setCounter] = useState(0);
     const visible = useSelector(selectVisibility);
     useEffect(()=>{
-        if(visible === false){
-            return toggleMargin();
-        }else if(counter !== 0){
+        if(counter !== 0){
             return toggleMargin();
         }  
         setCounter(1);
