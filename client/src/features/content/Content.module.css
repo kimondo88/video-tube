@@ -37,3 +37,8 @@
     align-items: center;
     justify-content : center;
 }
+.moveToLeft{
+    margin-left: 0vw;
+    width: fit-content;
+    height: 100%;
+}

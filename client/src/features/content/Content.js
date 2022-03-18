@@ -1,5 +1,7 @@
 import styles from './Content.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectVisibility } from '../navbar/navbarSlice';
 
 export function Content(){
     //temporarily disable it for eslint, setContent will be used later
@@ -8,8 +10,23 @@ export function Content(){
         'first', 'two', 'three', 'four' , 'five', 'six', 'seven',
         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen'
     ]);
+    const [counter, setCounter] = useState(0);
+    const visible = useSelector(selectVisibility);
+    useEffect(()=>{
+        if(visible === false){
+            return toggleMargin();
+        }else if(counter !== 0){
+            return toggleMargin();
+        }  
+        setCounter(1);
+    // eslint-disable-next-line
+    }, [visible]);
+    function toggleMargin(){
+        let element = document.getElementById('contentWrapper');
+        element.classList.toggle(styles.moveToLeft);
+    }
     return (
-        <div className={styles.contentWrapper}>
+        <div id="contentWrapper" className={styles.contentWrapper}>
             <div className={styles.content}>
             {content.map( item => {
                 return <div className={styles.contentItem}><span>{item}</span></div>
