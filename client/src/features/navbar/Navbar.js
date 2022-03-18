@@ -3,6 +3,11 @@ import styles from './Navbar.module.css';
 import { toggleVisible } from './navbarSlice';
 import { useDispatch} from 'react-redux';
 
+/** Top Navbar Position Fixed Component
+ * 
+ * @returns Navbar Fixed Component with Button, Searchbar and RightMenuComponent
+ */
+
 export function Navbar(){
     const dispatch = useDispatch();
     return (

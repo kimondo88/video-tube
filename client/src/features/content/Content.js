@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectVisibility } from '../navbar/navbarSlice';
 
+/** Main content component for the site, display fetched thumbnails videos and so on.
+ * TODO display fetched thumbnails
+ * @returns contentWrapper with mapped content
+ */
+
 export function Content(){
     //temporarily disable it for eslint, setContent will be used later
     // eslint-disable-next-line

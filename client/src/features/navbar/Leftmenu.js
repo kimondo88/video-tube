@@ -4,6 +4,12 @@ import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCompass, faBolt} from '@fortawesome/free-solid-svg-icons';
+
+/** Leftmenu Component for display that is toggled with button click( Navbar on top)
+ *  
+ * @returns LeftMenu component having LMenuShow and LMenuMin components
+ */
+
 export function LeftMenu(){
     return (
         <div>
@@ -12,6 +18,11 @@ export function LeftMenu(){
         </div>
     )
 }
+
+/** Full Menu component
+ * 
+ * @returns Full Menu Clickable divs
+ */
 
 function LeftMenuShow(){ 
     const [counter, setCounter] = useState(0);
@@ -50,6 +61,11 @@ function LeftMenuShow(){
         </div>
     )
 }
+
+/** Minimized Menu Component, Home, Discover, Shorts Anchor Clickable Divs with Font Awesome Icons
+ * 
+ * @returns Minimized Menu -> Clickable Divs with Font Awesome Icons
+ */
 
 function LeftMenuMin(){
     const [counter, setCounter] = useState(0);
