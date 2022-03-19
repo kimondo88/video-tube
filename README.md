@@ -9,5 +9,5 @@ Video-Tube is my attempt at recreating youtube like site. Practice makes perfect
 
 # Documentation
 
-- It is available in client/docs.
+- It is available in docs. Rough draft. 
 - Its automated from jsdoc notation. 
