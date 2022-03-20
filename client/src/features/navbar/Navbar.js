@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './Navbar.module.css';
 import { toggleVisible } from './navbarSlice';
 import { useDispatch} from 'react-redux';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 /** Top Navbar Position Fixed Component
  * 
  * @returns Navbar Fixed Component with Button, Searchbar and RightMenuComponent
@@ -13,10 +15,20 @@ export function Navbar(){
     return (
     <div className={styles.navFixed}>
         <div className={styles.flex}>
-            <button className={styles.home} onClick={() => dispatch(toggleVisible())}>Vid-Tube Button</button>
+            <div className={styles.flexTop}>
+                <FontAwesomeIcon className={styles.button + ' fa-2xl'} 
+                icon={faCaretDown}
+                onClick={() => dispatch(toggleVisible())}/>
+                <FontAwesomeIcon icon={faYoutubeSquare} 
+                className={styles.home + ' fa-2xl'} 
+                >
+                </FontAwesomeIcon>
+                <div className={styles.homeBehind}></div>
+                <span>VideoTube</span>
+            </div>
             <div className={styles.search}>
                 <input className={styles.inputSearch} 
-                type="test"
+                type="text"
                 aria-label='search input' 
                 placeholder="Search"></input>
             </div>

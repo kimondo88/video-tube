@@ -21,9 +21,42 @@
     justify-content: space-between;
     align-items: center;
 }
+.flexTop{
+    height: 100%;
+    width: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .home{
-    margin-left: 4vw;
-    color: black;
+    position: absolute;
+    margin-left: 0;
+    color: red;
+    cursor: pointer;
+    z-index: 3;
+}
+.homeBehind{
+    width: 1.5em;
+    height: 1em;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+.button{
+    position: relative;
+    border-radius: 50%;
+    margin-left: 1.5em;
+    width: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.button:active{
+    background-color: #5E5E5E;
+}
+.flexTop > span {
+    cursor: pointer;
+    margin-left: 2.8em;
 }
 .search{
 
