@@ -40,7 +40,7 @@ function LeftMenuShow(){
     }
     return (
         <div id='menu' className={styles.leftBar + ' ' + styles.duration}>
-            <div className={styles.font}>
+            <div className={styles.font + ' ' + styles.active}>
                 <FontAwesomeIcon 
                 className={styles.gridItem} 
                 icon={faHouse}/>

@@ -1,7 +1,8 @@
 :root{
-    --nav-color: #383838;
+    --nav-color: #222121;
     --nav-analogous: #525252;
     --nav-hover-color: #5E5E5E;
+    --nav-hover-active: #787878;
     --text-color: white;
 
 }
@@ -111,17 +112,16 @@
 }
 .font{
     cursor: pointer;
-    margin-top: 0.7vh;
-    height: 2.5vh;
+    height: 3.5vh;
     color: var(--text-color);
     display: inline-grid;
     grid-template-columns: 1fr 3fr;
     justify-content: center;
+    align-content: center;
 }
 .fontMin{
     cursor: pointer;
-    margin-top: 0.7vh;
-    height: 2.5vh;
+    height: 3.5vh;
     color: var(--text-color);
     display: inline-grid;
     grid-template-columns: 1fr;
@@ -129,6 +129,13 @@
 }
 .font:hover, .fontMin:hover{
     background-color: var(--nav-hover-color);
+}
+.active{
+    background-color: var(--nav-hover-color);
+}
+.active:hover{
+    background-color: var(--nav-hover-active);
+    z-index: 1;
 }
 .gridItem{
     justify-self: center;

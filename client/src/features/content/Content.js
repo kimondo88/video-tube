@@ -32,12 +32,12 @@ export function Content(){
         <div id="contentWrapper" className={styles.contentWrapper}>
             <div className={styles.content}>
             {content.map( item => {
-                return <div className={styles.contentItem}><span>{item}</span></div>
+                return <div key={item+1}className={styles.contentItem}><span>{item}</span></div>
             })}
             </div>
             <div className={styles.content}>
             {content.map( item => {
-                return <div className={styles.contentItem}><span>{item}</span></div>
+                return <div key={item+2}className={styles.contentItem}><span>{item}</span></div>
             })}
             </div>
         </div>
