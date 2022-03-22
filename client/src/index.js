@@ -2,14 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { store } from './app/store';
+import configureStore, { history } from './app/store';
 import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { BrowserRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+
+const store = configureStore(/* provide initial state if any */)
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ConnectedRouter history={history}>   
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+      </ConnectedRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
