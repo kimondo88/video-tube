@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCompass, faBolt} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 /** Leftmenu Component for display that is toggled with button click( Navbar on top)
  *  
@@ -19,13 +20,14 @@ export function LeftMenu(){
     )
 }
 
-/** Full Menu component
+/** Full Menu component, renders active highlight for active link component
  * 
  * @returns Full Menu Clickable divs
  */
 
-function LeftMenuShow(){ 
+function LeftMenuShow(props){ 
     const [counter, setCounter] = useState(0);
+    const [active, setActive] = useState('home');
     const visible = useSelector(selectVisibility);
     useEffect(()=>{
         if(counter !== 0){
@@ -38,25 +40,32 @@ function LeftMenuShow(){
         let element = document.getElementById('menu');
         element.classList.toggle(styles.none);
     }
+    function toggleActive(id){
+        let element = document.getElementById(active);
+        element.classList.toggle(styles.active);
+        element = document.getElementById(id);
+        setActive(id);
+        element.classList.toggle(styles.active);
+    }
     return (
         <div id='menu' className={styles.leftBar + ' ' + styles.duration}>
-            <div className={styles.font + ' ' + styles.active}>
+            <div id="home" className={styles.font + " " + styles.active}>
                 <FontAwesomeIcon 
                 className={styles.gridItem} 
                 icon={faHouse}/>
-                Home
+                <Link to="/" onClick={()=> toggleActive('home')}>Home</Link>
             </div>
-            <div className={styles.font}>
+            <div id="discover" className={styles.font}>
                 <FontAwesomeIcon 
                 className={styles.gridItem} 
                 icon={faCompass} />
-                Discover
-                </div>
-            <div className={styles.font}>
+                <Link to="/discover" onClick={()=> toggleActive('discover')}>Discover</Link>
+            </div>
+            <div id='shorts' className={styles.font}>
                 <FontAwesomeIcon 
                 className={styles.gridItem} 
                 icon={faBolt} />
-                Shorts
+                <Link to="/shorts" onClick={()=> toggleActive('shorts')}>Shorts</Link>
                 </div>
         </div>
     )

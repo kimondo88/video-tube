@@ -141,3 +141,7 @@
     justify-self: center;
     align-self: center;
 }
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}

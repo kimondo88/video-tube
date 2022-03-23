@@ -12,7 +12,8 @@ function App() {
       <div className="flex">
       <Routes>
         <Route exact path="/" element={<Home />}/>
-        <Route path='/home' element={<Test/>}/>
+        <Route path='/discover' element={<Home/>}/>
+        <Route path='/shorts' element={<Home/>}/>
       </Routes>
       </div>
     </div>
@@ -28,9 +29,4 @@ function Home(){
   )
 }
 
-function Test(){
-  return(
-    <div>Hello World<br/><br/>XXX</div>
-  )
-}
 export default App;
