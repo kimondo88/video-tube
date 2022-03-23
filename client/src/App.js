@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from './features/navbar/Navbar';
 import { LeftMenu } from './features/navbar/Leftmenu';
+import { Tags } from './features/navbar/Tags';
 import { Content } from './features/content/Content';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <Tags></Tags>
       <div className="flex">
       <Routes>
         <Route exact path="/" element={<Home />}/>

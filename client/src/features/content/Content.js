@@ -24,9 +24,14 @@ export function Content(){
         setCounter(1);
     // eslint-disable-next-line
     }, [visible]);
+    /**
+     * Toggles Content and Tags to the left after clicking on nabvar button
+     */
     function toggleMargin(){
         let element = document.getElementById('contentWrapper');
         element.classList.toggle(styles.moveToLeft);
+        element = document.getElementById('tag');
+        element.classList.toggle(styles.moveTag);
     }
     return (
         <div id="contentWrapper" className={styles.contentWrapper}>

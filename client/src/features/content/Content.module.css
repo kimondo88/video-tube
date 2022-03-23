@@ -8,8 +8,9 @@
 .contentWrapper{
     background-color: var(--nav-color);
     position: relative;
-    margin-top: 5vh;
+    margin-top: 10vh;
     margin-left: 12vw;
+    padding-left: 0.5em;
     width: fit-content;
     height: fit-content;
 }
@@ -41,4 +42,7 @@
     margin-left: 0vw;
     width: fit-content;
     height: 100%;
+}
+.moveTag{
+    margin-left: 3vw;
 }
