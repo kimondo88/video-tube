@@ -3,6 +3,7 @@
     --nav-analogous: #525252;
     --nav-hover-color: #5E5E5E;
     --nav-hover-active: #787878;
+    --tag-background: #363636;
     --text-color: white;
 
 }
@@ -21,13 +22,34 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    width: 1700px;
     height: 5vh;
     margin: 5vh 0 0 12vw;
     padding-left: 0.5em;
     z-index: 1;
     border-bottom: 1px solid var(--nav-analogous);
+}
+.big{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.tagItem{
+    user-select: none;
+    display: flex;
+    font-size: 0.9em;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--nav-hover-color);
+    border-radius: 18px;
+    background-color: var(--tag-background);
+    width: 9em;
+    height: 1.8em;
+    margin-right: 0.4em;
+    z-index: 1;
 }
 .flex{
     height: 100%;
@@ -131,33 +153,24 @@
     grid-template-columns: 1fr;
     justify-content: center;
 }
-.font:hover, .fontMin:hover{
+.font:hover, .fontMin:hover, .tagItem:hover{
     background-color: var(--nav-hover-color);
 }
 .active{
     background-color: var(--nav-hover-color);
 }
+.tagActive, .tagActive:hover{
+    background-color: var(--text-color);
+    color: #000000;
+}
 .active:hover{
     background-color: var(--nav-hover-active);
-    z-index: 1;
 }
 .gridItem{
     justify-self: center;
     align-self: center;
 }
-.tagItem{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #5E5E5E;
-    border-radius: 18px;
-    background-color: #363636;
-    width: 5em;
-    height: 2em;
-    margin-top: 0.35em;
-    margin-right: 0.3em;
-    z-index: 1;
-}
+
 a{
     color: var(--text-color);
     text-decoration: none;

@@ -2,16 +2,36 @@ import styles from './Navbar.module.css'
 import { useState } from 'react';
 export function Tags(){
     const [content] = useState([
-        'first', 'two', 'three', 'four' , 'five', 'six', 'seven',
+        'all', 'games', 'music', 'talents' , 'politics', 'six', 'seven',
         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen'
     ]);
+    const [active, setActive] = useState("t0");
+    function toggleActive(id){
+        let element = document.getElementById(active);
+        element.classList.toggle(styles.tagActive);
+        setActive(id);
+        element = document.getElementById(id);
+        element.classList.toggle(styles.tagActive);
+    }
     return (
         <div id="tag" className={styles.tagFixed}>
-            {content.map( item => {
-            return <div key={item+1}className={styles.tagItem}>
-                    <span>{item}</span>
-                    </div>
+            <div className={styles.big}>
+            { content.map( (item, index) => {
+                let id = "t"+index, justOnceActive = " " + styles.tagActive;
+                if(index !== 0 ){
+                    justOnceActive = ""
+                }
+                return (<div 
+                            id={id} 
+                            key={item+1} 
+                            className={styles.tagItem + justOnceActive}
+                            onClick={()=> toggleActive(id)}
+                        >
+                            <span>{item}</span>
+                        </div>)
             })}
+            </div>
+            
         </div>
     )
 }
