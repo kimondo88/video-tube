@@ -1,7 +1,7 @@
 import styles from './Navbar.module.css'
 import { useState } from 'react';
 export function Tags(){
-    const [content, setContent] = useState([
+    const [content] = useState([
         'first', 'two', 'three', 'four' , 'five', 'six', 'seven',
         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen'
     ]);
