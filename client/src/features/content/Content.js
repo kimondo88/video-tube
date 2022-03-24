@@ -32,6 +32,8 @@ export function Content(){
         element.classList.toggle(styles.moveToLeft);
         element = document.getElementById('tag');
         element.classList.toggle(styles.moveTag);
+        element = document.getElementById('scrollRight');
+        element.classList.toggle(styles.moveScroll);
     }
     return (
         <div id="contentWrapper" className={styles.contentWrapper}>

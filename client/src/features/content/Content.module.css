@@ -8,8 +8,8 @@
 .contentWrapper{
     background-color: var(--nav-color);
     position: relative;
-    margin-top: 10vh;
-    margin-left: 12vw;
+    margin-top: 6em;
+    margin-left: 15em;
     padding-left: 0.5em;
     width: fit-content;
     height: fit-content;
@@ -39,10 +39,14 @@
     justify-content : center;
 }
 .moveToLeft{
-    margin-left: 0vw;
+    margin-left: 0;
     width: fit-content;
     height: 100%;
 }
 .moveTag{
-    margin-left: 3vw;
+    margin-left: 2.5em;
+    width: 97vw;
+}
+.moveScroll{
+    margin-left: -12em;
 }

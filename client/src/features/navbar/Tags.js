@@ -10,7 +10,8 @@ import { faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-so
 export function Tags(){
     const [content] = useState([
         'all', 'games', 'music', 'talents' , 'politics', 'six', 'seven',
-        'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen'
+        'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen', '14ten', 
+        '15ten'
     ]);
     const [active, setActive] = useState("t0");
     function toggleActive(id){
@@ -25,7 +26,7 @@ export function Tags(){
      */
     function scrollLeft(){
         const element = document.getElementById('tag');
-        element.scrollLeft += 100;
+        element.scrollLeft += 500;
         const scrollRight= document.getElementById('scrollRight');
         if(!scrollRight.classList.contains(styles.scrollButtonRight)){
             scrollRight.classList.toggle(styles.scrollButtonRight)
@@ -36,9 +37,9 @@ export function Tags(){
      */
     function scrollRight(){
         const element = document.getElementById('tag');
-        element.scrollLeft -= 100;
+        element.scrollLeft -= 500;
         const scrollRight= document.getElementById('scrollRight');
-        if(element.scrollLeft === 0){
+        if(element.scrollLeft < 501){
             scrollRight.classList.toggle(styles.scrollButtonRight)
         }
     }

@@ -12,7 +12,7 @@
     color: white;
     position: fixed;
     width: 100%;
-    height: 5vh;
+    height: 3em;
     z-index: 2;
     border-bottom: 1px solid var(--nav-analogous);
 }
@@ -24,9 +24,10 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
-    width: 1700px;
-    height: 5vh;
-    margin: 5vh 0 0 12vw;
+    scroll-behavior: smooth;
+    width: 87vw;
+    height: 3em;
+    margin: 3em 0 0 14em;
     padding-left: 0.5em;
     z-index: 1;
     border-bottom: 1px solid var(--nav-analogous);
@@ -34,7 +35,7 @@
 .scrollBox{
     display: flex;
     flex-direction: row;
-    width: auto;
+    width: auto
 }
 .scrollButtonLeft{
     cursor: pointer;
@@ -74,7 +75,7 @@
     border: 1px solid var(--nav-hover-color);
     border-radius: 18px;
     background-color: var(--tag-background);
-    width: 9em;
+    width: 11em;
     height: 1.8em;
     margin-right: 0.4em;
     z-index: 1;
@@ -129,33 +130,33 @@
 .inputSearch{
     color: var(--nav-color);
     background-color: black;
-    height: 2.5vh;
-    width: 25vw;
+    height: 2em;
+    width: 45em;
     border-style: none;
     outline: 1px solid var(--nav-analogous);
 }
 .leftBar{
     background-color: var(--nav-color);
     position: fixed;
-    margin-top: 5vh;
+    margin-top: 3em;
     margin-left: 0px;
     padding-right: 0.5em;
     display: flex;
     visibility: visible;
     flex-direction: column;
     height: 95%;
-    width: 12vw;
+    width: 14em;
     overflow: hidden;
     z-index: 1;
 }
 .leftBarMin{
     background-color: var(--nav-color);
     position: fixed;
-    margin-top: 5vh;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     height: 95%;
-    width: 3vw;
+    width: 2.5em;
     overflow: hidden;
     z-index: 1;
 }
@@ -167,7 +168,8 @@
 }
 .font{
     cursor: pointer;
-    height: 3.5vh;
+    user-select: none;
+    height: 2.5em;
     color: var(--text-color);
     display: inline-grid;
     grid-template-columns: 1fr 3fr;
@@ -175,7 +177,7 @@
 }
 .fontMin{
     cursor: pointer;
-    height: 3.5vh;
+    height: 2.5em;
     color: var(--text-color);
     display: inline-grid;
     grid-template-columns: 1fr;
