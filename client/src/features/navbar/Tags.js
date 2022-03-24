@@ -1,5 +1,12 @@
 import styles from './Navbar.module.css'
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-solid-svg-icons';
+
+/** Tags fixed bar, contains two buttons that scroll through content, they appear after clicking
+ * 
+ * @returns tag fixed bar below navbar, and scroll button for scrolling through tag bar
+ */
 export function Tags(){
     const [content] = useState([
         'all', 'games', 'music', 'talents' , 'politics', 'six', 'seven',
@@ -13,9 +20,31 @@ export function Tags(){
         element = document.getElementById(id);
         element.classList.toggle(styles.tagActive);
     }
+    /** Function for scrolling left, also it makes scrollRight button visible
+     *  
+     */
+    function scrollLeft(){
+        const element = document.getElementById('tag');
+        element.scrollLeft += 100;
+        const scrollRight= document.getElementById('scrollRight');
+        if(!scrollRight.classList.contains(styles.scrollButtonRight)){
+            scrollRight.classList.toggle(styles.scrollButtonRight)
+        }
+    }
+    /** Function for scrolling right, it makes scroll right button dissapear
+     *   if you can't scroll right anymore
+     */
+    function scrollRight(){
+        const element = document.getElementById('tag');
+        element.scrollLeft -= 100;
+        const scrollRight= document.getElementById('scrollRight');
+        if(element.scrollLeft === 0){
+            scrollRight.classList.toggle(styles.scrollButtonRight)
+        }
+    }
     return (
         <div id="tag" className={styles.tagFixed}>
-            <div className={styles.big}>
+            <div className={styles.scrollBox}>
             { content.map( (item, index) => {
                 let id = "t"+index, justOnceActive = " " + styles.tagActive;
                 if(index !== 0 ){
@@ -31,7 +60,12 @@ export function Tags(){
                         </div>)
             })}
             </div>
-            
+            <div id="scrollRight" onClick={()=> scrollRight()}>
+                <FontAwesomeIcon icon={faArrowAltCircleLeft}></FontAwesomeIcon>
+            </div>
+            <div id="scrollLeft" className={styles.scrollButtonLeft} onClick={()=> scrollLeft()}>
+                <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon>
+            </div>
         </div>
     )
 }
