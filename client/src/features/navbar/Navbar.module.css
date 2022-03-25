@@ -25,9 +25,9 @@
     align-items: center;
     overflow: hidden;
     scroll-behavior: smooth;
-    width: 87vw;
+    width: 87%;
     height: 3em;
-    margin: 3em 0 0 14em;
+    margin: 3em 0 0 17%;
     padding-left: 0.5em;
     z-index: 1;
     border-bottom: 1px solid var(--nav-analogous);
@@ -46,7 +46,7 @@
     background-color: rgba(34, 33, 33, 0.93);
     color: var(--text-color);
     position: fixed;
-    top: 3.3em;
+    top: 3.5em;
     right: 0.5em;
     z-index: 7;
     box-shadow: 0em 0em 0.5em 0.5em rgba(34, 33, 33, 0.93) ;
@@ -60,15 +60,14 @@
     background-color: rgba(34, 33, 33, 0.93);
     color: var(--text-color);
     position: fixed;
-    top: 3.3em;
-    left: 14.5em;
+    top: 3.5em;
+    left: 17%;
     z-index: 7;
     box-shadow: 0em 0em 0.5em 0.5em rgba(34, 33, 33, 0.93) ;
 }
 .tagItem{
     user-select: none;
     display: flex;
-    font-size: 0.9em;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -125,13 +124,13 @@
     margin-left: 2.8em;
 }
 .search{
-
+    background-color: var(--nav-color);
 }
 .inputSearch{
     color: var(--nav-color);
     background-color: black;
     height: 2em;
-    width: 45em;
+    width: 25vw;
     border-style: none;
     outline: 1px solid var(--nav-analogous);
 }
@@ -139,13 +138,13 @@
     background-color: var(--nav-color);
     position: fixed;
     margin-top: 3em;
-    margin-left: 0px;
+    margin-left: 0 auto;
     padding-right: 0.5em;
     display: flex;
     visibility: visible;
     flex-direction: column;
     height: 95%;
-    width: 14em;
+    width: 17%;
     overflow: hidden;
     z-index: 1;
 }

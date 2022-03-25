@@ -9,7 +9,7 @@
     background-color: var(--nav-color);
     position: relative;
     margin-top: 6em;
-    margin-left: 14.5em;
+    margin-left: 17%;
     padding-left: 0.5em;
     width: fit-content;
     height: fit-content;
@@ -22,6 +22,11 @@
 }
 .content > div {
     margin: 1rem;
+}
+.contentStuffing{
+    background-color: var(--nav-color);
+    height: 100vh;
+    max-height: 10em;
 }
 .flex{
     display: flex;
@@ -44,9 +49,9 @@
     height: 100%;
 }
 .moveTag{
-    margin-left: 2.5em;
-    width: 97vw;
+    margin: 3em 0 0 2%;
+    width: 100%;
 }
 .moveScroll{
-    margin-left: -12em;
+    left: 2.2em;
 }

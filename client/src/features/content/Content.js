@@ -47,6 +47,7 @@ export function Content(){
                 return <div key={item+2}className={styles.contentItem}><span>{item}</span></div>
             })}
             </div>
+            { !visible ? <div className={styles.contentStuffing}></div> : false}
         </div>
     )
 }
