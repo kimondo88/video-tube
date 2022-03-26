@@ -25,9 +25,10 @@
     align-items: center;
     overflow: hidden;
     scroll-behavior: smooth;
-    width: 87%;
+    width: 100%;
+    max-width: 104rem;
     height: 3em;
-    margin: 3em 0 0 17%;
+    margin: 3em 0 0 12em;
     padding-left: 0.5em;
     z-index: 1;
     border-bottom: 1px solid var(--nav-analogous);
@@ -61,22 +62,25 @@
     color: var(--text-color);
     position: fixed;
     top: 3.5em;
-    left: 17%;
+    left: 12em;
     z-index: 7;
     box-shadow: 0em 0em 0.5em 0.5em rgba(34, 33, 33, 0.93) ;
 }
 .tagItem{
     user-select: none;
-    display: flex;
+    display: inline-flex;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
     border: 1px solid var(--nav-hover-color);
     border-radius: 18px;
     background-color: var(--tag-background);
-    width: 11em;
-    height: 1.8em;
-    margin-right: 0.4em;
+    width: fit-content;
+    height: 1.6em;
+    margin-right: 0.7em;
+    margin-left: 0.7em;
+    padding: 0.2em 0.7em 0.2em 0.7em;
     z-index: 1;
 }
 .flex{
@@ -143,8 +147,9 @@
     display: flex;
     visibility: visible;
     flex-direction: column;
-    height: 95%;
-    width: 17%;
+    height: 100%;
+    max-height: 150em;
+    width: 12em;
     overflow: hidden;
     z-index: 1;
 }

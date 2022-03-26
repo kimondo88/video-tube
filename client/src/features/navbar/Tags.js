@@ -9,9 +9,10 @@ import { faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-so
  */
 export function Tags(){
     const [content] = useState([
-        'all', 'games', 'music', 'talents' , 'politics', 'six', 'seven',
-        'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen', '14ten', 
-        '15ten'
+        'All Content', 'games', 'music', 'talents' , 'politics', 'shocking', 'seven',
+        'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen', 'fourthen', 
+        '15ten', 'basketball', 'culinary programs', 'wrestling', 'tiktok',
+        'swim', 'olympics'
     ]);
     const [active, setActive] = useState("t0");
     function toggleActive(id){
@@ -26,7 +27,7 @@ export function Tags(){
      */
     function scrollLeft(){
         const element = document.getElementById('tag');
-        element.scrollLeft += 500;
+        element.scrollLeft += element.scrollWidth+1;
         const scrollRight= document.getElementById('scrollRight');
         if(!scrollRight.classList.contains(styles.scrollButtonRight)){
             scrollRight.classList.toggle(styles.scrollButtonRight)

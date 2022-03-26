@@ -9,7 +9,7 @@
     background-color: var(--nav-color);
     position: relative;
     margin-top: 6em;
-    margin-left: 17%;
+    margin-left: 12em;
     padding-left: 0.5em;
     width: fit-content;
     height: fit-content;
@@ -51,6 +51,7 @@
 .moveTag{
     margin: 3em 0 0 2%;
     width: 100%;
+    max-width: 114rem;
 }
 .moveScroll{
     left: 2.2em;
