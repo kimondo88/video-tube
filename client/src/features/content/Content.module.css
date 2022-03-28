@@ -11,8 +11,9 @@
     margin-top: 6em;
     margin-left: 12em;
     padding-left: 0.5em;
+    min-height: 100vh;
+    max-width: 100vw;
     width: fit-content;
-    height: fit-content;
 }
 .content{
     display: flex;

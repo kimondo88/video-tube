@@ -26,7 +26,7 @@
     overflow: hidden;
     scroll-behavior: smooth;
     width: 100%;
-    max-width: 104rem;
+    max-width: 105rem;
     height: 3em;
     margin: 3em 0 0 12em;
     padding-left: 0.5em;
@@ -80,7 +80,7 @@
     height: 1.6em;
     margin-right: 0.7em;
     margin-left: 0.7em;
-    padding: 0.2em 0.7em 0.2em 0.7em;
+    padding: 0.2em 1em 0.2em 1em;
     z-index: 1;
 }
 .flex{

@@ -1,5 +1,7 @@
 import styles from './Navbar.module.css'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { sortByGames, sortByAll, sortBySport } from '../content/contentSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-solid-svg-icons';
 
@@ -8,9 +10,10 @@ import { faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-so
  * @returns tag fixed bar below navbar, and scroll button for scrolling through tag bar
  */
 export function Tags(){
+    const dispatch = useDispatch();
     const [content] = useState([
         'All Content', 'games', 'music', 'talents' , 'politics', 'shocking', 'seven',
-        'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen', 'fourthen', 
+        'sport', 'nine', 'ten', 'eleven', 'twelve', 'thirtheen', 'fourthen', 
         '15ten', 'basketball', 'culinary programs', 'wrestling', 'tiktok',
         'swim', 'olympics'
     ]);
@@ -21,6 +24,22 @@ export function Tags(){
         setActive(id);
         element = document.getElementById(id);
         element.classList.toggle(styles.tagActive);
+    }
+    function sortTag(id){
+        switch(id){
+            case 't0':
+                return dispatch(sortByAll());
+            case 't1':
+                return dispatch(sortByGames());
+            case 't7':
+                return dispatch(sortBySport());
+            default:
+                return null;
+        }
+    }
+    function clickOnTag(id){
+        toggleActive(id);
+        return sortTag(id);
     }
     /** Function for scrolling left, also it makes scrollRight button visible
      *  
@@ -56,7 +75,7 @@ export function Tags(){
                             id={id} 
                             key={item+1} 
                             className={styles.tagItem + justOnceActive}
-                            onClick={()=> toggleActive(id)}
+                            onClick={()=> clickOnTag(id)}
                         >
                             <span>{item}</span>
                         </div>)
