@@ -52,12 +52,16 @@ export function Content(){
                 })}
             </div>
             <div className={styles.content}>
-            {content.map( item => {
-                if(item.tag === 'sport' || tag === 'all'){
-                    return <div key={item.name+2}className={styles.contentItem}><span>{item.name}</span></div>
-                }
-                return null
-            })}
+            {tag === 'all' ? 
+                content.map( item => {
+                    return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                })
+                : content.map( item => {
+                    if(item.tag === tag ){
+                        return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                    }
+                    return null
+                })}
             </div>
             { !visible ? <div className={styles.contentStuffing}></div> : false}
         </div>

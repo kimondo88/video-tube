@@ -115,7 +115,7 @@
 .button{
     position: relative;
     border-radius: 50%;
-    margin-left: 1.5em;
+    margin-left: 1.2em;
     width: 2em;
     color: var(--text-color);
     cursor: pointer;
@@ -125,7 +125,7 @@
 }
 .flexTop > span {
     cursor: pointer;
-    margin-left: 2.8em;
+    margin-left: 3em;
 }
 .search{
     background-color: var(--nav-color);
@@ -160,7 +160,7 @@
     display: flex;
     flex-direction: column;
     height: 95%;
-    width: 2.5em;
+    width: 3em;
     overflow: hidden;
     z-index: 1;
 }
