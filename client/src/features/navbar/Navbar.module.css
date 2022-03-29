@@ -128,7 +128,14 @@
     margin-left: 3em;
 }
 .search{
+    display: flex;
+    align-items: center;
     background-color: var(--nav-color);
+}
+.searchBox{
+    width: 10%;
+    padding: 0.4em ;
+    background-color: var(--tag-background);
 }
 .inputSearch{
     color: var(--nav-color);
@@ -165,7 +172,12 @@
     z-index: 1;
 }
 .rightBar{
-    color: red;
+    width: 10%;
+    padding-right: 1em;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: repeat(3, 4rem);
+    justify-items: center;
 }
 .none{
     display: none;

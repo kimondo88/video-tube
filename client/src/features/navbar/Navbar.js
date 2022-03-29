@@ -3,7 +3,10 @@ import styles from './Navbar.module.css';
 import { toggleVisible } from './navbarSlice';
 import { useDispatch} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { 
+    faCaretDown, faBell, faUpload, faTableCells,
+    faMagnifyingGlass
+} from '@fortawesome/free-solid-svg-icons';
 import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 /** Top Navbar Position Fixed Component
  * 
@@ -31,8 +34,26 @@ export function Navbar(){
                 type="text"
                 aria-label='search input' 
                 placeholder="Search"></input>
+                <div className={styles.searchBox}>
+                    <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    />
+                </div>
             </div>
-            <div className={styles.rightBar}>Right-Menu</div>
+            <div className={styles.rightBar}>
+                <FontAwesomeIcon 
+                icon={faUpload}
+                className={'fa-lg'}
+                />
+                <FontAwesomeIcon 
+                icon={faTableCells}
+                className={'fa-lg'}
+                />
+                <FontAwesomeIcon 
+                icon={faBell}
+                className={'fa-lg'}
+                />   
+            </div>
         </div>
     </div>
     )
