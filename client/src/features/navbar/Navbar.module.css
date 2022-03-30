@@ -11,7 +11,7 @@
     background-color: var(--nav-color);
     color: white;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 3em;
     z-index: 2;
     border-bottom: 1px solid var(--nav-analogous);
@@ -25,10 +25,8 @@
     align-items: center;
     overflow: hidden;
     scroll-behavior: smooth;
-    width: 100%;
-    max-width: 105rem;
     height: 3em;
-    margin: 3em 0 0 12em;
+    inset: 3em 0.5em 0 12em;
     padding-left: 0.5em;
     z-index: 1;
     border-bottom: 1px solid var(--nav-analogous);
@@ -172,7 +170,6 @@
     z-index: 1;
 }
 .rightBar{
-    width: 10%;
     padding-right: 1em;
     color: var(--text-color);
     display: grid;

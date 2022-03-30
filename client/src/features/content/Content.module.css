@@ -7,18 +7,19 @@
 }
 .contentWrapper{
     background-color: var(--nav-color);
-    position: relative;
+    position: absolute;
     margin-top: 6em;
-    margin-left: 12em;
+    left: 12em;
+    right: 0;
     padding-left: 0.5em;
     min-height: 100vh;
-    min-width: 100vw;
     width: fit-content;
 }
 .content{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 85vw;
     max-width: 100rem;
     border-bottom: 4px solid var(--nav-analogous);
 }
@@ -37,7 +38,7 @@
     align-items: center;
 }
 .contentItem{
-    width: 14rem;
+    width: 18rem;
     height: 9rem;
     display: flex;
     background-color: var(--nav-shadeT);
@@ -46,15 +47,14 @@
     justify-content : center;
 }
 .moveToLeft{
-    margin-left: 0;
+    left: 0;
     width: fit-content;
     padding-left: 2.5rem;
 }
 .moveTag{
-    margin: 3em 0 0 2%;
+    left: 3em;
     width: 100%;
-    max-width: 114rem;
 }
 .moveScroll{
-    left: 2.2em;
+    left: 3em;
 }

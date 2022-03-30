@@ -1,5 +1,8 @@
-
+html{
+  font-size: 16px;
+}
 body {
+  background-color: #222121;
   margin: 0;
   font-family: 'Roboto', serif;
   -webkit-font-smoothing: antialiased;
