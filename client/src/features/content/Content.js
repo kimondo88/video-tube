@@ -12,9 +12,15 @@ export function Content(){
     //temporarily disable it for eslint, setContent will be used later
     // eslint-disable-next-line
     const [content, setContent] = useState([
-        { name: 'Minecraft', tag: 'games'}, { name: 'Elden Ring', tag: 'games'}, { name: 'Dark Souls', tag: 'games'},
-        { name: 'Ghost of Tsushima', tag: 'games'}, { name: 'BloodBorne', tag: 'games'}, { name: 'Dark Souls 2', tag: 'games'},
-        { name: 'Champions League', tag: 'sport'}, { name: 'WTA 1000', tag: 'sport'}, { name: 'Running', tag: 'sport'}
+        { name: 'Minecraft', tag: 'games', title: "You won't believe it", author: 'Sleepy'}, 
+        { name: 'Elden Ring', tag: 'games', title: "You won't believe it", author: 'Sleepy'}, 
+        { name: 'Dark Souls', tag: 'games', title: "You won't believe it", author: 'Sleepy'},
+        { name: 'Ghost of Tsushima', tag: 'games', title: "You won't believe it", author: 'Sleepy'}, 
+        { name: 'BloodBorne', tag: 'games', title: "You won't believe it", author: 'Sleepy'}, 
+        { name: 'Dark Souls 2', tag: 'games', title: "You won't believe it", author: 'Sleepy'},
+        { name: 'Champions League', tag: 'sport', title: "You won't believe it", author: 'Sleepy'}, 
+        { name: 'WTA 1000', tag: 'sport', title: "You won't believe it", author: 'Eurosport'}, 
+        { name: 'Running', tag: 'sport', title: "You won't believe it", author: 'Eurosport'}
     ]);
     const [counter, setCounter] = useState(0);
     const visible = useSelector(selectVisibility);
@@ -42,11 +48,27 @@ export function Content(){
             <div className={styles.content}>
             {tag === 'all' ? 
                 content.map( item => {
-                    return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                    return <div>
+                                <div key={item.name+1}className={styles.contentItem}>
+                                    <span>{item.name}</span>
+                                </div>
+                                <div className={styles['flex-column']}>
+                                    <span className={styles['content__title']}>{item.title}</span>
+                                    <span className={styles['content__author']}>{item.author}</span>
+                                </div>
+                            </div>
                 })
                 : content.map( item => {
                     if(item.tag === tag ){
-                        return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                        return <div>
+                        <div key={item.name+1}className={styles.contentItem}>
+                            <span>{item.name}</span>
+                        </div>
+                        <div className={styles['flex-column']}>
+                            <span className={styles['content__title']}>{item.title}</span>
+                            <span className={styles['content__author']}>{item.author}</span>
+                        </div>
+                    </div>
                     }
                     return null
                 })}
@@ -54,11 +76,27 @@ export function Content(){
             <div className={styles.content}>
             {tag === 'all' ? 
                 content.map( item => {
-                    return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                    return <div>
+                                <div key={item.name+1}className={styles.contentItem}>
+                                    <span>{item.name}</span>
+                                </div>
+                                <div className={styles['flex-column']}>
+                                    <span className={styles['content__title']}>{item.title}</span>
+                                    <span className={styles['content__author']}>{item.author}</span>
+                                </div>
+                            </div>
                 })
                 : content.map( item => {
                     if(item.tag === tag ){
-                        return <div key={item.name+1}className={styles.contentItem}><span>{item.name}</span></div>
+                        return <div>
+                                    <div key={item.name+1}className={styles.contentItem}>
+                                        <span>{item.name}</span>
+                                    </div>
+                                    <div className={styles['flex-column']}>
+                                        <span className={styles['content__title']}>{item.title}</span>
+                                        <span className={styles['content__author']}>{item.author}</span>
+                                    </div>
+                                </div>
                     }
                     return null
                 })}
